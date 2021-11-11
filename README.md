@@ -16,3 +16,8 @@ source .venv/bin/activate
 pip install --upgrade pip
 pip install pillow pytesseract opencv-python-headless tqdm
 ```
+
+# Run
+```bash
+python video2sbv.py path/to/video.mp4 path/to/subtitles.sbv
+```
