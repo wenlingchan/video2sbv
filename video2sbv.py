@@ -46,9 +46,9 @@ def _video2sbv(args):
         t_start = datetime.timedelta(milliseconds=i * (1000 / fps))
         t_end = datetime.timedelta(milliseconds=(i + 1) * (1000 / fps))
         t_start_str = "{}:{:02d}:{:02d}.{:03d}".format(
-            t_start.seconds // 3600, t_start.seconds // 60, t_start.seconds, t_start.microseconds // 1000)
+            t_start.seconds // 3600, t_start.seconds // 60, t_start.seconds % 60, t_start.microseconds // 1000)
         t_end_str = "{}:{:02d}:{:02d}.{:03d}".format(
-            t_end.seconds // 3600, t_end.seconds // 60, t_end.seconds, t_end.microseconds // 1000)
+            t_end.seconds // 3600, t_end.seconds // 60, t_end.seconds % 60, t_end.microseconds // 1000)
 
         # Store result
         if len(subtitles) > 0 and subtitles[-1]["text"] == text:
