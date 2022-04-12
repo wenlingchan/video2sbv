@@ -140,10 +140,10 @@ def _video2sbv(args):
 
 def _get_parser():
     parser = argparse.ArgumentParser(description="Video embedded subtitles to SBV")
-    parser.add_argument("video_file", help="Video file path")
-    parser.add_argument("sbv_file", help="Output SBV file path")
-    parser.add_argument("--separator", type=float, default=0.87, help="Position of the horizontal line separating the subtitles, in fraction of video height")
-    parser.add_argument("--lang", default="chi_tra", help="Language of the subtitles")
+    parser.add_argument("video_file", help="video file path")
+    parser.add_argument("sbv_file", help="output SBV file path")
+    parser.add_argument("--separator", type=float, default=0.87, help="position of the horizontal line separating the subtitles, in fraction of video height")
+    parser.add_argument("--lang", default="chi_tra", help="language of the subtitles, default is chi_tra")
     return parser
 
 
